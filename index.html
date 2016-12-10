@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="creativeFamily">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
@@ -14,11 +14,17 @@
 
   <title>Creative Family</title>
 </head>
-<body>
+<body ng-controller="testController">
   <h1>Creative Family is coming!</h1>
   <p>The first paragraph</p>
 
-  <ul id="test-block"></ul>
+  <p>{{ testVariable }}</p>
 
+  <ul id="test-block">
+    <li ng-repeat="item in response">{{ item.company }} {{ item.phone }}</li>
+  </ul>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.min.js"></script>
+  <script src="mainAngular.js"></script>
 </body>
 </html>
